@@ -22,10 +22,11 @@ Der Wavetable-Synthesizer bietet folgende Funktionen:
 - LFO Wellenform über Taster
 - MIDI-In über Pin 1
 - Audio-Ausgabe über I2S an PCM5102 (Pins BCLK=20, DOUT=21, WS=22)
-Der synth ist monofon spielbar
+
+Der synth ist monofon spielbar.
 
 ## Besonderheiten
-Der rp2350 muss in der IDE auf 300MHz übertaktet werden, sonst wird der Ton unsauber.
+Der rp2350 muss in der IDE auf 300MHz übertaktet werden, sonst wird der Ton unsauber. Der RP2350 hat nur wenige analoge Eingänge, deswegen wurde ein 16bit Multiplexer auf Basis des CD74HC4067 genutzt um ausreichend 10k Potenziometer für die Bedienung anzuschliessen.
 
 ## Midi-In Bedienung
 Klassisches Midi-keyboard mit 5pol.Buchse (Midi-out am Keyboard). Der Midi-In ist eine einfache Schaltung mit Optokoppler an GP01 =RX.
