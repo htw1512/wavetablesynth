@@ -27,5 +27,8 @@ Der synth ist monofon spielbar
 ## Besonderheiten
 Der rp2350 muss in der IDE auf 300MHz übertaktet werden, sonst wird der Ton unsauber.
 
-##Midi-In Bedienung
+## Midi-In Bedienung
 Klassisches Midi-keyboard mit 5pol.Buchse (Midi-out am Keyboard). Der Midi-In ist eine einfache Schaltung mit Optokoppler an GP01 =RX.
+
+## KI Nutzung
+Der Code wurde mit Unterstützung der KI Studio AI von Google geschrieben. Hier ist die Vergesslichkeitsrate nicht so hoch, andere KI's produzieren da mehr Fehler oder "vergessen" Code. Es kann nützlich sein den Code immer wieder in andere KI's zum Check hochzuladen und prüfen zu lassen. Der Synth ist als Machbarkeitsstudie gedacht und weniger als High-End Gerät. Es ist mit dem Code spielbar, hat aber Grenzen, die sowohl in der Arduino-IDE Verwendung liegen (Andere Projekte nutzen die PICO-SDK, womit mehr Performance zu erwarten ist) als auch beim RP2350 und seiner Hardware liegen.
