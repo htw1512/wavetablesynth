@@ -1,4 +1,4 @@
-# Wavetable-Synthesizer für RP2040 (Pico 2)
+# Wavetable-Synthesizer für RP2350 (Pico 2)
 wavetablesynthesizer mit Raspberry Pico2 RP2350 und Arduino IDE
 
 Der Code für einen Wavetable-Synthesizer auf Basis des **Raspberry Pi Pico 2 (RP2040 / RP2350)** wurde mit der **Arduino IDE 2.3.4** entwickelt – unterstützt durch den Einsatz von Künstlicher Intelligenz (KI). Das Projekt ist noch nicht abgeschlossen.
@@ -28,6 +28,9 @@ Der synth ist monofon spielbar.
 ## Besonderheiten
 Der rp2350 muss in der IDE auf 300MHz übertaktet werden, sonst wird der Ton unsauber. Der RP2350 hat nur wenige analoge Eingänge, deswegen wurde ein 16bit Multiplexer auf Basis des CD74HC4067 genutzt um ausreichend 10k Potenziometer für die Bedienung anzuschliessen. Der Synth wird mit 3,3 Volt betrieben.
 
+## Arduino-IDE
+es wurden bis auf die midi.h keine besonderen Bibliotheken importiert. Alles ist Standard.
+
 ## Midi-In Bedienung
 Klassisches Midi-keyboard mit 5pol.Buchse (Midi-out am Keyboard). Der Midi-In ist eine einfache Schaltung mit Optokoppler an GP01 =RX.
 
@@ -35,3 +38,8 @@ Klassisches Midi-keyboard mit 5pol.Buchse (Midi-out am Keyboard). Der Midi-In is
 
 ## KI Nutzung
 Haupzweck dieses Projektes war die Nutzung von KI's zur Code Generierung. Am Anfang sollte mir die KI -in dem Fall ChatGPT erstmal einen Überblick geben, was ein wavetable synth macht, welche Modelle es gab und welche Funktionen man mit microcontroller einfach umsetzen kann. Grosser Vorteil: sehr gut strukturierte Antworten. Die Verwendung des rp2350 (günstig in China) war gerade verfügbar, ist modern und einigermassen potent. wenn man auf der Ebene bleiben will gibt die KI richtigerweise wertvolle Hinweise zur Auswahl. ESP32, STM32FX, rp2040 oder rp2350, oder Teensy. Letzterer ist der Leistungsstärkste, aber auch wesentlich teurer. Dazu kommt das Handling insbesondere mit I2S Bus, welches Mühe machen kann. Für den ESP32 ist das einfacher, für den rp2350 geht es auch, wohl aber komplexer. es gibt ähnliche Projekte für den pico2 auf Basis der pico-sdk, pico-extras, was ich auch mit der KI versucht habe, aber gescheitert bin. Audiotechnisch wäre das sicherlich besser. Versuche wurden mit chatGPT, DeepSeek, StudioAI. Letztendlich wurde der der Code mit Unterstützung der KI Studio AI von Google geschrieben. Hier ist die Vergesslichkeitsrate nicht so hoch, andere KI's produzieren da mehr Fehler oder "vergessen" Code. Um die Arbeit mit der KI zu erleichtern, wurde darauf zu verzichtet, den code modular aufzubauen. Die KI hatten Schwierigkeiten sowohl den Hauptcode als auch die Unterdateien gleichzeitig zu aktualisieren. Trotzdem ist es bei allen KI's Geduld gefragt. Es wurde immer mit kostenlosen Bersionen gearbeitet. Es kann auch nützlich sein den Code immer wieder in andere KI's zum Check hochzuladen und prüfen zu lassen. Der Synth ist als Machbarkeitsstudie gedacht und weniger als High-End Gerät. Es ist mit dem Code spielbar, hat aber Grenzen, die sowohl in der Arduino-IDE Verwendung liegen, als auch beim RP2350 und seiner Hardware liegen.
+
+## Links zu ähnlichen Projekten
+Folgende Projekte mit dem RP2040 oder anderen Boards haben dieses Projekt inspiriert, https://github.com/raybellis/PicoSynth/tree/main
+https://github.com/marcel-licence
+
