@@ -36,7 +36,7 @@ es wurden bis auf die midi.h keine besonderen Bibliotheken importiert. Alles ist
 Klassisches Midi-keyboard mit DIN 5pol.Buchse (Midi-out am Keyboard). Der Midi-In ist eine einfache Schaltung mit Optokoppler an GP01 =RX.
 
 ## Audioausgabe: I2S DAC (z.B. PCM5102A) - Kopfhörerausgang 
-<pre> ```VCC > 3,3 Volt
+<pre> VCC > 3,3 Volt
 3,3V > leer
 GND > GND
 FLT > GND
@@ -46,10 +46,10 @@ BCK > GP20
 DIN > GP22
 LCK > GP21
 FMT > GND
-XMT > 3,3Volt``` </pre>
+XMT > 3,3Volt </pre>
 
 ## Anschlüsse rp2350
-GP1 = Midi-In RX
+<pre>GP1 = Midi-In RX
 GP2 = S0 Multiplexer
 GP3 = S1 Multiplexer
 GP4 = S2 Multiplexer
@@ -62,10 +62,10 @@ GP20 = BCLK pcm5102
 GP21 = LRCLK pcm5102
 GP22 = DOUT pcm51202
 Pin 36 > 3,3Volt
-Pin 38 > GND
+Pin 38 > GND</pre>
 
 ## Anschlüsse 16 Channel Analog Multiplexer Board
-c0-c15 > Potentiometer
+<pre>c0-c15 > Potentiometer
 SIG > A0
 S0 > GP2
 S1 > GP3
@@ -73,7 +73,7 @@ S2 > GP4
 S3 > GP5
 EN > leer
 VCC > 3,3 Volt
-GND > GND
+GND > GND </pre>
 
 
 ## KI Nutzung
